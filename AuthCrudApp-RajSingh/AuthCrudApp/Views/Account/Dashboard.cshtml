@@ -1,0 +1,18 @@
+﻿<h2>Dashboard</h2>
+<h2>Add New User</h2>
+
+
+@if (User.IsInRole("Admin"))
+{
+    <a href="/Account/Register">
+        <button>Add User</button>
+    </a>
+}
+
+<a href="/Employee/Index">
+    <button>Employees</button>
+</a>
+
+<a href="/Account/Logout">
+    <button>Logout</button>
+</a>

@@ -1,0 +1,211 @@
+/* General Page Style */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(to right, #FAEBD7, #764ba2);
+    margin: 0;
+    padding: 0;
+}
+
+/* Center Container */
+.container-box {
+    width: 350px;
+    margin: 80px auto;
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+    /* Heading */
+    .container-box h2 {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+/* Input Fields */
+input {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+/* Buttons */
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #CD5C5C;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+    button:hover {
+        background-color: #5a67d8;
+    }
+
+/* ===== Modern Gradient Button ===== */
+
+.add-btn {
+    width: auto;
+    padding: 10px 28px;
+    border: none;
+    border-radius: 30px;
+    font-weight: bold;
+    font-size: 14px;
+    color: white;
+    cursor: pointer;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    transition: all 0.3s ease;
+}
+
+    /* Hover Effect */
+    .add-btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 15px rgba(102, 126, 234, 0.4);
+    }
+
+    /* Click Effect */
+    .add-btn:active {
+        transform: scale(0.95);
+    }
+
+/* Table Styling */
+
+
+table {
+    width: 90%;
+    margin: 30px auto;
+    border-collapse: collapse;
+    table-layout: fixed; /* Keeps columns equal */
+    background: white;
+}
+
+
+th, td {
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+
+th {
+    background-color: #4e73df;
+    color: white;
+    font-weight: bold;
+}
+
+
+td {
+    white-space: nowrap; /* Prevent line break */
+    overflow: hidden;
+    text-overflow: ellipsis; /* Adds ... if text too long */
+}
+
+
+tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+
+tbody tr:hover {
+    background-color: #e6e9ff;
+}
+
+/* Right Align Salary Column (3rd column) */
+td:nth-child(4) {
+    text-align: center;
+    padding-right: 20px;
+}
+
+
+/* Action Links */
+a {
+    text-decoration: none;
+    color: #667eea;
+    font-weight: bold;
+}
+
+    a:hover {
+        color: #764ba2;
+    }
+
+
+/* ===== Modern Header Layout ===== */
+
+.header-row {
+    width: 90%;
+    margin: 25px auto;
+    position: relative;
+    text-align: center;
+}
+
+    /* Center Title */
+    .header-row h2 {
+        margin: 0;
+    }
+
+/* Keep Search on Right */
+.search-wrapper {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* ===== Modern Search Box ===== */
+
+.search-container {
+    position: relative;
+}
+
+    .search-container input {
+        width: 220px;
+        padding: 8px 10px 8px 35px;
+        border-radius: 25px;
+        border: 1px solid #ccc;
+        outline: none;
+        transition: 0.3s;
+        font-size: 14px;
+    }
+
+        .search-container input:focus {
+            border-color: #667eea;
+            box-shadow: 0 0 8px rgba(102, 126, 234, 0.4);
+        }
+
+.search-icon {
+    position: absolute;
+    top: 50%;
+    left: 12px;
+    transform: translateY(-50%);
+    font-size: 14px;
+    color: #777;
+}
+
+
+
+.main-content {
+    flex: 1;
+
+    display: flex;
+    justify-content: center; /* Horizontal center */
+    align-items: center; /* Vertical center */
+    flex-direction: column; /* Stack text vertically */
+    text-align: center; /* Center text */
+}
+
+.panel-title {
+    font-size: 28px;
+    font-weight: bold;
+    color: #333;
+}
+
+.panel-subtitle {
+    font-size: 16px;
+    color: #666;
+    margin-top: 10px;
+}

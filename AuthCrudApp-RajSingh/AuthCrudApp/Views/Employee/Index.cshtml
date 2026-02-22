@@ -1,0 +1,27 @@
+﻿<form>
+    <input name="search" placeholder="Search" />
+    <button>Search</button>
+</form>
+
+<table border="1">
+    @foreach (var e in Model)
+    {
+        <tr>
+            <td>@e.Name</td>
+            <td>@e.Department</td>
+            <td>@e.Salary</td>
+            @if (User.IsInRole("Admin"))
+            {
+                <td>
+                    <a href="/Employee/Edit/@e.Id">Edit</a>
+                    <a href="/Employee/Delete/@e.Id">Delete</a>
+                </td>
+            }
+        </tr>
+    }
+</table>
+
+@if (User.IsInRole("Admin"))
+{
+    <a href="/Employee/Create">Add New</a>
+}

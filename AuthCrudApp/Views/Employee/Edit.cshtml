@@ -1,0 +1,25 @@
+﻿<link rel="stylesheet" href="~/css/site.css" />
+
+<div class="page-container">
+    
+    <h2 style="text-align:center;"> Edit Employee</h2>
+    
+   
+
+    <form method="post">
+        <input type="hidden" name="Id" value="@Model.Id" />
+
+        <input name="Name" value="@Model.Name" required />
+
+        <input name="Department" value="@Model.Department" required />
+
+        <input name="Salary" type="number" value="@Model.Salary" required />
+
+        <button type="submit">Update</button>
+    </form>
+
+    <br />
+    <div style="text-align:center;">
+        <a href="/Employee/Index">Back to List</a>
+    </div>
+</div>

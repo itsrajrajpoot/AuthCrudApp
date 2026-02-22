@@ -1,0 +1,22 @@
+﻿@model Employee
+
+<h2>Add Employee</h2>
+
+<form asp-action="Create" asp-controller="Employee" method="post">
+    <div>
+        <label>Name</label>
+        <input asp-for="Name" name="Name" />
+    </div>
+
+    <div>
+        <label>Department</label>
+        <input asp-for="Department" name="Department" />
+    </div>
+
+    <div>
+        <label>Salary</label>
+        <input asp-for="Salary" name="Salary" />
+    </div>
+
+    <button type="submit">Save</button>
+</form>

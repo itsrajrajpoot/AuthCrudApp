@@ -1,0 +1,39 @@
+﻿<link rel="stylesheet" href="~/css/site.css" />
+
+<div class="main-content">
+
+    @if (User.IsInRole("Admin"))
+    {
+        <h1 class="panel-title">Welcome to Admin Panel</h1>
+        <p class="panel-subtitle">
+            Manage Users and Employees seamlessly from this control panel.
+        </p>
+    }
+    else
+    {
+        <h1 class="panel-title">Welcome</h1>
+        <p class="panel-subtitle">
+            You can view employee records from here.
+        </p>
+    }
+
+</div>
+
+<div style="text-align:center; margin-top:40px;">
+
+    @if (User.IsInRole("Admin"))
+    {
+        <a href="/Account/Register">
+            <button>Add User</button>
+        </a>
+    }
+
+    <a href="/Employee/Index">
+        <button>Employees</button>
+    </a>
+
+    <a href="/Account/Logout">
+        <button>Logout</button>
+    </a>
+
+</div>
