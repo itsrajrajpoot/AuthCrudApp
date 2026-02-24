@@ -2,13 +2,15 @@
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 WORKDIR /src
 
-# Copy project file
-COPY AuthCrudApp.csproj ./
-RUN dotnet restore
+# Copy everything
+COPY . .
 
-# Copy everything else
-COPY . ./
-RUN dotnet publish AuthCrudApp.csproj -c Release -o /app/out
+# Move into project folder
+WORKDIR /src/AuthCrudApp
+
+# Restore & Publish
+RUN dotnet restore
+RUN dotnet publish -c Release -o /app/out
 
 # Runtime Stage
 FROM mcr.microsoft.com/dotnet/aspnet:8.0
