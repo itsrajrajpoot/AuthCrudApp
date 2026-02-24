@@ -1,9 +1,14 @@
 # Build Stage
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
-WORKDIR /app
+WORKDIR /src
 
-COPY . .
-RUN dotnet publish -c Release -o out
+# Copy project file
+COPY AuthCrudApp.csproj ./
+RUN dotnet restore
+
+# Copy everything else
+COPY . ./
+RUN dotnet publish AuthCrudApp.csproj -c Release -o /app/out
 
 # Runtime Stage
 FROM mcr.microsoft.com/dotnet/aspnet:8.0
